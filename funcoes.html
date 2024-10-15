@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona de javascript</title>
+    <script src="./js/funcoes.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        body{
+            font-family: 'Nunito';
+            width: 50%;
+            margin: auto 10%;
+        }
+        h3{
+            padding: 1%;
+        }        
+        div{
+            margin: 2% auto;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maratona de Javascript</h1>
+    <h2>Funções</h2>
+    <div>
+        <h3>Calculadora de divisões</h3>
+        <form id="funcao-divisao">
+            <label for="dividendo">Insira o dividendo.</label>
+            <input type="number" id="dividendo">
+
+            <label for="divisor">Insira o divisor.</label>
+            <input type="number" id="divisor">
+
+            <input type="submit" value="Calcular">
+        </form>
+        <p id="resultFuncaoDivisao">Resultado:</p>
+    </div>
+
+    <div>
+        <h3>Ordem alfabética</h3>
+        <form id="form-palavras">
+            <label for="palavraInseridaForm">Insira as palavras que deseja ordenar, uma por vez.</label>
+            <input type="text" id="palavraInseridaForm">
+            <input type="submit" value="Enviar">
+        </form>
+        <h4>Palavras Ordenadas:</h4>
+        <ul id="palavrasOrdenadasHtml"></ul>
+    </div>
+
+    <h3>Qual é o maior número?</h3>
+        <form id="form-maior-numero">
+            <label for="numeroInseridoForm">Insira os números que deseja comparar.</label>
+            <input type="number" id="numeroInseridoForm">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="maiorNumeroHtml">Maior número:</p>
+    </div>
+
+    <h3>Inverta um texto!</h3>
+        <form id="form-string-invertido">
+            <label for="stringInserido">Insira o texto que deseja inverter.</label>
+            <input type="text" id="stringInserido">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="stringInvertidoHtml">Texto invertido: </p>
+    </div>
+
+</body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona de javascript</title>
+    <script src="./js/lacos.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        body{
+            font-family: 'Nunito';
+            width: 50%;
+            margin: auto 10%;
+        }
+        h3{
+            padding: 1%;
+        }        
+        div{
+            margin: 2% auto;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maratona de Javascript</h1>
+    <h2>Laços</h2>
+    <div>
+        <h3>Números ímpares entre 1 e 100</h3>
+        <p id="numerosImpares"></p>
+    </div>
+
+    <div>
+        <h3>M[ultiplos de 5 entre 1 e 50</h3>
+        <p id="multiplos5"></p>
+    </div>
+
+    <h3>Soma de números</h3>
+        <form id="soma-ate-num">
+            <label for="numeroInseridoC">Insira um número. Será calculada a soma de todos os números de 1 até o número inserido.</label>
+            <input type="number" id="numeroInseridoC">
+
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="resultadoSoma">Resultado:</p>     
+    </div>
+
+</body>

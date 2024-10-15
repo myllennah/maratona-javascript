@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona de javascript</title>
+    <script src="./js/condicionais.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        body{
+            font-family: 'Nunito';
+            width: 50%;
+            margin: auto 10%;
+        }
+        h3{
+            padding: 1%;
+        }        
+        div{
+            margin: 2% auto;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Maratona de Javascript</h1>
+    <h2>Condicionais</h2>
+    <div>
+        <h3>Número entre 1 e 100</h3>
+        <form id="1a100">
+            <label for="numero1a100Html">Insira um número e descubra se ele está entre 1 e 100.</label>
+            <input type="number" id="numero1a100Html">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="resultado1a100"></p>
+    </div>
+
+    <div>
+        <h3>Criança, adolescente ou adulto?</h3>
+        <form id="idade-fase">
+            <label for="valor-idade">Insira a idade:</label>
+            <input type="number" id="valor-idade">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="resultadoFase"></p>
+    </div>
+
+    <div>
+        <h3>Quantos dias tem esse mês?</h3>
+        <form id="dias-mes">
+            <label for="nome-mes">Insira o nome de um mês do ano.</label>
+            <input type="text" id="nome-mes">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="respostaMeses"></p>
+    </div>
+
+    <div>
+        <h3>Positivo, negativo ou zero?</h3>
+        <form id="positivo-negativo">
+            <label for="numero-pos-neg">Digite um número.</label>
+            <input type="number" id="numero-pos-neg">
+            <input type="submit" value="Enviar">
+        </form>
+        <p id="respostaPosNegHtml">O número é...</p>
+    </div>
+</body>
+</html>
