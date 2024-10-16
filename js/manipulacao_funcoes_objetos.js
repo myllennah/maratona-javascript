@@ -16,10 +16,10 @@ function somarEstoque(){
 }
 
 function preencherTabela (produtos) {
-    for (let produto of produtos) {
+    for (var produto of produtos) {
     let linha = document.createElement('tr');
-    let colunaProduto = document.createElement('td');
-    let colunaEstoque = document.createElement('td');
+    var colunaProduto = document.createElement('td');
+    var colunaEstoque = document.createElement('td');
 
     colunaProduto.textContent = produto.nome;
     colunaEstoque.textContent = produto.estoque;
@@ -28,7 +28,6 @@ function preencherTabela (produtos) {
     linha.appendChild(colunaEstoque);
     corpoTabelaProdutos.appendChild(linha);
     }
-
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 2 - aprovação de estudantes
 const alunos = [
     { pessoa: "Pedro Oliveira dos Santos", nota: 9 },
-    { pessoa: "Ana Maria Pereira", nota: 8 },
+    { pessoa: "Ana Maria Pereira", nota: 8.5 },
     { pessoa: "Aiko Tanaka", nota: 7 },
     { pessoa: "Lucas Costa Silva", nota: 4 },
     { pessoa: "Emily Garcia de Lima", nota:10 },
@@ -67,6 +66,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // FUNÇOES COM OBJETOS
+// 1 - média de preço de produtos
+const precos = [899.90, 279.40, 129.90, 2499.00];
+produtos.forEach((produto, index) => produto.preco = precos[index]);
+
+function calcularMedia(){
+    let soma = 0;
+    for (let preco of precos) {
+        soma += preco;
+    }
+    const media = soma / precos.length;
+    precoMedioHtml.textContent = `Média: ${media}`;
+}
+
+function preencherTabelaPrecos() {
+    for (let produto of produtos) {
+        let linhaPreco = document.createElement('tr');
+        let colunaProduto = document.createElement('td');
+        let colunaPreco = document.createElement('td');
+
+        colunaProduto.textContent = produto.nome;
+        colunaPreco.textContent = produto.preco;
+    
+        linhaPreco.appendChild(colunaProduto);
+        linhaPreco.appendChild(colunaPreco);
+        corpoTabelaPrecos.appendChild(linhaPreco);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    calcularMedia(precos);
+    preencherTabelaPrecos(precos)
+
+});
+
+
 // 2 - alunos com nota acima de 8
 
 function preencherTabelaAlunos() {
