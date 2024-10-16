@@ -37,12 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 2 - aprovação de estudantes
 const alunos = [
-    { pessoa: "Pedro Oliveira dos Santos", nota: 9 },
-    { pessoa: "Ana Maria Pereira", nota: 8.5 },
-    { pessoa: "Aiko Tanaka", nota: 7 },
+    { pessoa: "Pedro Oliveira dos Santos", nota: 8.5 },
+    { pessoa: "Ana Maria Pereira", nota: 5.5 },
+    { pessoa: "Aiko Tanaka", nota: 9.5 },
     { pessoa: "Lucas Costa Silva", nota: 4 },
-    { pessoa: "Emily Garcia de Lima", nota:10 },
+    { pessoa: "Emily Garcia de Lima", nota: 10 },
     { pessoa: "Amira Khan El-Masry", nota: 6 },
+    { pessoa: "Monica Cerqueira Gonçalves", nota: 7.5 },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let colunaStatusAluno = document.createElement('td');
 
         colunaNomeAluno.textContent = aluno.pessoa;
-        const status = aluno.nota >= 7 ? "Aprovado" : "Reprovado";
+        const status = aluno.nota >= 6 ? "Aprovado" : "Reprovado";
         colunaStatusAluno.textContent = status;
         
         if (status === "Reprovado") {
@@ -62,6 +63,31 @@ document.addEventListener("DOMContentLoaded", () => {
         linhaAluno.appendChild(colunaNomeAluno);
         linhaAluno.appendChild(colunaStatusAluno);
         corpoTabelaAlunos.appendChild(linhaAluno);
+    }
+});
+
+// 4 - alunos acima da média
+
+document.addEventListener("DOMContentLoaded", () => {
+    let somaNotas = 0;
+    for (let aluno of alunos) {
+        somaNotas += aluno.nota;
+    }
+    const notaMedia = somaNotas / alunos.length;
+    notaMediaHtml.textContent = `Nota média: ${notaMedia.toFixed(2)}`;
+
+    for (let aluno of alunos) {
+        let linhaAlunoMedia = document.createElement('tr');
+        let colunaNomeAlunoMedia = document.createElement('td');
+        let colunaStatusAlunoMedia = document.createElement('td');
+        
+        if (aluno.nota > notaMedia) {
+            colunaNomeAlunoMedia.textContent = aluno.pessoa;
+            colunaStatusAlunoMedia.textContent = aluno.nota;
+            linhaAlunoMedia.appendChild(colunaNomeAlunoMedia);
+            linhaAlunoMedia.appendChild(colunaStatusAlunoMedia);
+            corpoTabelaMedia.appendChild(linhaAlunoMedia);
+        }
     }
 });
 
@@ -96,8 +122,7 @@ function preencherTabelaPrecos() {
 
 document.addEventListener("DOMContentLoaded", () => {
     calcularMedia(precos);
-    preencherTabelaPrecos(precos)
-
+    preencherTabelaPrecos(precos);
 });
 
 
