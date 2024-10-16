@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    font-family: 'Nunito';
+    width: 50%;
+    margin: auto 10%;
+}
+
+h3{
+    padding: 1% 0%;
+}        
+
+div{
+    margin: 2% auto;
+    border-bottom: 1px solid black;
+}
+
+table{
+    margin: 5% 0%;
+}
